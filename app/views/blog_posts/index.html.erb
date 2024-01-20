@@ -12,3 +12,7 @@
 </div>
 
 <%= link_to "New blog post", new_blog_post_path %>
+
+<div class="my-10">
+  <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
+</div>

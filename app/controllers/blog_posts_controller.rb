@@ -3,7 +3,8 @@ class BlogPostsController < ApplicationController
 
   # GET /blog_posts or /blog_posts.json
   def index
-    @blog_posts = BlogPost.all
+    @blog_posts = BlogPost.all.sorted
+    @pagy, @blog_posts = pagy(@blog_posts, items: 10)
   end
 
   # GET /blog_posts/1 or /blog_posts/1.json
