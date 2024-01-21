@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
+  get 'useful_resources/new'
+  get 'useful_resources/index'
   resources :blog_posts do
     resource :cover_image, only: [:destroy], module: :blog_posts
   end
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :useful_resources
 
-  # Defines the root path route ("/")
-  # root "articles#index"
   root "blog_posts#index"
 
 end

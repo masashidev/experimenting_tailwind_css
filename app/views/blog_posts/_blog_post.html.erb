@@ -2,9 +2,6 @@
 
   <%= image_tag blog_post.cover_image.variant(resize_to_limit: [200, 200]) if blog_post.cover_image.present? %>
 
-
-
-
   <h2 class="p-0.5 bg-gray-300">
     <%= link_to blog_post.title, blog_post %>
   </h2>

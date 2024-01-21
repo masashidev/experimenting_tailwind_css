@@ -1,0 +1,20 @@
+<%= link_to 'New Useful Resource', new_useful_resource_path %>
+
+<div>
+  <svg class="w-6 h-6 animate-spin"  viewBox="0 0 24 24">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+  </svg>
+</div>
+
+
+
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+<% 10.times do %>
+  <%= render partial:'my_card' %>
+<% end %>
+</div
+
+
+<% @useful_resources.each do |useful_resource| %>
+  <%= render useful_resource, useful_resource: useful_resource %>
+<% end %>

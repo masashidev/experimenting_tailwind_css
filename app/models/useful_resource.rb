@@ -1,0 +1,3 @@
+class UsefulResource < ApplicationRecord
+  
+end
