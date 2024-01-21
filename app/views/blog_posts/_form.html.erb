@@ -17,6 +17,15 @@
   </div>
 
   <div>
+    <%= form.label :cover_image, style: "display: block" %>
+    <% if blog_post.cover_image.present? %>
+      <%= image_tag blog_post.cover_image, class: "w-1/4" %>
+      <%= link_to "Remove cover image", blog_post_cover_image_path(blog_post), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+    <% end %>
+    <%= form.file_field :cover_image %>
+  </div>
+
+  <div>
     <%= form.label :content, style: "display: block" %>
     <%= form.rich_text_area :content %>
   </div>

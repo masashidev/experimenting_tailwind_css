@@ -6,6 +6,7 @@ class BlogPostsController < ApplicationController
     @blog_posts = BlogPost.all.sorted
     @pagy, @blog_posts = pagy(@blog_posts, items: 10)
     rescue Pagy::OverflowError
+      # redirect_to root_path(page: 1)
       params[:page] = 1
     retry
   end
@@ -69,6 +70,6 @@ class BlogPostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def blog_post_params
-      params.require(:blog_post).permit(:title, :content)
+      params.require(:blog_post).permit(:title, :content, :cover_image)
     end
 end
