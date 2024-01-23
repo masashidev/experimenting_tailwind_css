@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'static_pages/home', to: 'static_pages#home', as: 'home'
   get 'useful_resources/new'
   get 'useful_resources/index'
   resources :blog_posts do

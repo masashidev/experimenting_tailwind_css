@@ -76,4 +76,3 @@ gem "tailwindcss-rails", "~> 2.3"
 gem "pagy", "~> 6.4"
 
 gem "font-awesome-sass", "~> 6.5.1"
-
