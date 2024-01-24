@@ -2,9 +2,13 @@
 
 <h1 class="bg-gray-300 p-3">Blog posts</h1>
 
-<div id="blog_posts">
+<div id="blog_posts", class="grid grid-cols-2 gap-4 md:grid-col-2 lg:grid-cols-3 xl:grid-cols-4">
   <% @blog_posts.each do |blog_post| %>
-    <%= render blog_post %>
+    <div class="shadow-md shadow-blue-200 blur-sm hover:blur-none brightness-50 hover:brightness-100
+    p-1 truncate ...">
+      <%= render blog_post %>
+    </div>
+
   <% end %>
 </div>
 

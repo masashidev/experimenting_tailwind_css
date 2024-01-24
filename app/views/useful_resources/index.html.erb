@@ -13,7 +13,10 @@
 
 <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 <% 10.times do %>
-  <%= render partial:'my_card' %>
+  <div class="saturate-150 blur-xl">
+    <%= render partial:'my_card' %>
+  </div>
+
 <% end %>
 </div
 
